@@ -1,4 +1,4 @@
-# News Parser Application
+
 
 ## Overview
 

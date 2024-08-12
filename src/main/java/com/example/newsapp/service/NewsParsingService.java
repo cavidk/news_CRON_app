@@ -33,8 +33,10 @@ public class NewsParsingService {
     private List<News> parseNewsFromWebsite() {
         List<News> newsList = new ArrayList<>();
         try {
+
             // Connect to the news website (replace with the actual URL)
             Document doc = Jsoup.connect("https://example-news-website.com").get();
+
             // Select elements containing news articles
             Elements articles = doc.select(".article"); // Adjust the CSS selector based on the website's structure
 
@@ -44,7 +46,7 @@ public class NewsParsingService {
                     String description = article.select(".description").text(); // Adjust the CSS selector based on the website's structure
                     String timeString = article.select(".time").text(); // Adjust the CSS selector based on the website's structure
 
-                    // Parse the publication time (adjust the format based on the website's date format)
+                    // Parse the publication time
                     LocalDateTime publicationTime = LocalDateTime.parse(timeString, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
 
                     News news = new News();

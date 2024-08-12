@@ -21,6 +21,7 @@ This project consists of a Spring Boot backend for parsing and storing news from
 - MySQL (for production)
 - Gradle
 - H2 (for testing)
+- Java FX module from : https://jdk.java.net/javafx22/
 
 
 ## Setup
